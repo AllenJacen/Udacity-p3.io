@@ -502,6 +502,7 @@ function updatePositions() {
   for (var i = 0; i < items.length; i++) {
     var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+
     //   console.log(items[i].basicLeft + 100 * phase + 'px');
     //items[i].style.transform = 'translateX('+items[i].basicLeft+100 * phase+'px)';
   }
@@ -520,7 +521,7 @@ function updatePositions() {
 window.addEventListener('scroll', updatePositions);
 
 // 当页面加载时生成披萨滑窗
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function(){
   var cols = 8;
   var s = 256;
   for (var i = 0; i < 200; i++) {
