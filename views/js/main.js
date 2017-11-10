@@ -501,10 +501,11 @@ function updatePositions() {
   var items = document.querySelectorAll('.mover');
   for (var i = 0; i < items.length; i++) {
     var phase = Math.cos((document.body.scrollTop / 1250) + (i % 5));
-if(phase<0){
-  phase=Math.abs(phase);
-}
-    items[i].style.transform = 'translateX('+1000* phase+100+'px)';
+    //items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+// if(phase<0){
+//   phase=Math.abs(phase);
+// }
+    items[i].style.transform = 'translateX('+items[i].basicLeft+'px)';
   }
 
   // 再次使用User Timing API。这很值得学习
