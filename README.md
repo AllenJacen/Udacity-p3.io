@@ -4,6 +4,22 @@
 
 开始前，请导出这个代码库并检查代码。
 
+###优化的步骤
+1.压缩图片,由于图片在项目资源空间中占的比例大，所以有必要压缩图片，在这里我手动的压缩了图片。压缩图片有以下两种方式。
+  - 通过网站 [TinyPng][1]和[Base64 Image][2]来手动的压缩图片
+  - 通过构建工具gulp或者webpack，自动化的压缩图片。
+2.字体文件异步加载,Google退出中国市场，导致了诸多Google服务无法正常使用,导致页面加载速度受影响,采用字体文件异步加载,不影响页面渲染.
+3.内联css。对于一些内容较少的css文件,内联会使性能大大提高,这样可以减少页面加载时由于下载css文件而阻塞的问题，提高性能。
+4.用getElementById代替querySelector和querySelectorAll,因为getElementById消耗性能低,处理速度更块。[详见][3]
+5.用requestAnimationFrame优化Web动画，requestAnimationFrame会使得web动画更流畅。[详见][4]
+6.tramsform替换left，left会每次重新绘制，影响性能。
+
+
+[1]:https://tinypng.com/
+[2]:https://www.base64-image.de/
+[3]:https://jsperf.com/getelementbyid-vs-queryselector-vs-queryselector-by-id
+[4]:http://www.webhek.com/post/requestanimationframe.html
+
 ### 指南
 
 ####Part 1: 优化 index.html 的 PageSpeed Insights 得分

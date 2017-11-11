@@ -524,7 +524,7 @@ function updatePositions() {
 // if(phase<0){
 //   phase=Math.abs(phase);
 // }
-    items[i].style.transform = 'translateX('+items[i].basicLeft+'px)';
+    items[i].style.transform = 'translateX('+100 * phase+'px)';
   }
 
   // 再次使用User Timing API。这很值得学习
