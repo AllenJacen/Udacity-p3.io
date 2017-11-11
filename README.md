@@ -3,7 +3,8 @@
 你要做的是尽可能优化这个在线项目的速度。注意，请应用你之前在[网站性能优化课程](https://cn.udacity.com/course/website-performance-optimization--ud884/)中学习的技术来优化关键渲染路径并使这个页面尽可能快的渲染。
 
 开始前，请导出这个代码库并检查代码。
-
+###网站进入
+[https://allenjacen.github.io/Udacity-p3.io/]
 ###优化的步骤
 1.压缩图片,由于图片在项目资源空间中占的比例大，所以有必要压缩图片，在这里我手动的压缩了图片。压缩图片有以下两种方式。
   - 通过网站 [TinyPng][1]和[Base64 Image][2]来手动的压缩图片
